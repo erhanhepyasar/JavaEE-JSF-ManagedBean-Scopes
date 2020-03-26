@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	<title>Counter-Application Scoped</title>
+</head>
+<body>
+	<h3>Application Scoped</h3> 
+	<p>Run this URL in different browsers. You should see that they all share the same
+	counter value. Use Application Scope for objects that share the value between users such as a database
+	access value, a common inventory value, time or global messages.</p>
+	
+	<p><strong>Counter value:</strong> #{counterApplicationScoped.counterValue}</p>
+	
+	<h:form>
+		<h:commandButton action="#{counterApplicationScoped.incrementCounter()}" value="Click to increment"/>
+	</h:form>
+</body>
+</html>

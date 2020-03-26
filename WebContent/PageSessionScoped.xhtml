@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	<title>Counter-Session Scoped</title>
+</head>
+<body>
+	<h3>Session Scoped</h3> 
+	<p>Run this URL in different browsers. You should see that each session (user) 
+	has its own version of the increment value. Use this type of scope on a private instance of the 
+	variable such as a shopping cart or personal score in a game.</p>
+	
+	<p><strong>Counter value:</strong> #{counterSessionScoped.counterValue}</p>
+	
+	<h:form>
+		<h:commandButton action="#{counterSessionScoped.incrementCounter()}" value="Click to increment"/>
+	</h:form>
+</body>
+</html>

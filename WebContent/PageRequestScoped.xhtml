@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	<title>Counter-Request Scoped</title>
+</head>
+<body>
+	<h3>Request Scoped</h3> 
+	<p>Run this URL in different browsers. You should see that each request (click)
+	has its own version of the variable. The value is continually reset to its initial value of 0 and
+	 than incremented. Use this type of scope for short term values such as a form submission. This is the 
+	 default scope of a managed bean.</p>
+	
+	<p><strong>Counter value:</strong> #{counterRequestScoped.counterValue}</p>
+	
+	<h:form>
+		<h:commandButton action="#{counterRequestScoped.incrementCounter()}" value="Click to increment"/>
+	</h:form>
+</body>
+</html>
